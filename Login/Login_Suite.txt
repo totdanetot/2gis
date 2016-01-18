@@ -1,0 +1,12 @@
+*** Settings ***
+Suite Setup       Selenium2Library.Open Browser    http://maps.2gis.ru
+Suite Teardown    Selenium2Library.Close Browser
+Library           Selenium2Library
+Library           MainPage
+
+*** Test Cases ***
+Login
+    MainPage.Press Login Button
+    MainPage.Fill Email Field    a.a.burakov@yandex.ru
+    MainPage.Fill Password Field    123456qwerty
+    MainPage.Press Submit Credentials Button
